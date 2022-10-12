@@ -7,13 +7,13 @@ const todoList = () => {
   const markAsComplete = (index) => {
     all[index].completed = true;
   };
-
+// overdue section
   const overdue = () => {
     return all.filter(
       (item) => item.dueDate < new Date().toLocaleDateString("en-CA")
     );
   };
-
+//due today section
   const dueToday = () => {
     return all.filter(
       (item) => item.dueDate === new Date().toLocaleDateString("en-CA")
